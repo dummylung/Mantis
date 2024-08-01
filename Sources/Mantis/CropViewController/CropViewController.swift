@@ -174,7 +174,7 @@ open class CropViewController: UIViewController {
         }
     }
     
-    override public func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if initialLayout == false {
             initialLayout = true
