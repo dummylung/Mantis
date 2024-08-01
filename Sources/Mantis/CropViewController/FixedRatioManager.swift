@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct RatioItemType {
-    var nameH: String
-    var ratioH: Double
-    var nameV: String
-    var ratioV: Double
+public struct RatioItemType {
+    public var nameH: String
+    public var ratioH: Double
+    public var nameV: String
+    public var ratioV: Double
     
     init?(nameH: String, ratioH: Double, nameV: String, ratioV: Double) {
         guard ratioH > 0 && ratioV > 0 else {
@@ -26,13 +26,13 @@ struct RatioItemType {
     }
 }
 
-final class FixedRatioManager {
-    private (set) var ratios: [RatioItemType] = []
+open class FixedRatioManager {
+    open private(set) var ratios: [RatioItemType] = []
     private var ratioOptions: RatioOptions = .all
     private var customRatios: [RatioItemType] = []
 
-    var type: RatioType = .horizontal
-    var originalRatioH = 1.0
+    open private(set) var type: RatioType = .horizontal
+    open private(set) var originalRatioH = 1.0
     let fixedRatioNumber = 2
 
     init(type: RatioType, originalRatioH: Double, ratioOptions: RatioOptions = .all, customRatios: [RatioItemType] = []) {

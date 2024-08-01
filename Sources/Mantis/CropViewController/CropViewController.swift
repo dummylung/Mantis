@@ -135,7 +135,7 @@ open class CropViewController: UIViewController {
         }
     }
     
-    private func getFixedRatioManager() -> FixedRatioManager {
+    open func getFixedRatioManager() -> FixedRatioManager {
         let type: RatioType = getRatioType()
         
         let ratio = cropView.getImageHorizontalToVerticalRatio()
@@ -191,7 +191,7 @@ open class CropViewController: UIViewController {
         }
     }
     
-    public override var prefersStatusBarHidden: Bool {
+    open override var prefersStatusBarHidden: Bool {
         return true
     }
     
